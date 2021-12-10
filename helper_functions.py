@@ -290,3 +290,13 @@ import splitfolders
 
 def splitFolders(inputFolder, outputFolder, trainingRatio, validationRatio, testRatio):
   splitfolders.ratio(inputFolder, output=outputFolder, seed=42, ratio=(trainingRatio, validationRatio, testRatio))
+
+import pathlib
+import numpy as np
+
+# Get Class Names
+def getClassNames():
+  data_dir = pathlib.Path(train_dir)
+  class_names = np.array(sorted([item.name for item in data_dir.glob('*')]))
+  print(class_names)
+  return class_names
