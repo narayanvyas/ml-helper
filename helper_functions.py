@@ -286,7 +286,6 @@ def removeData(path):
   else:
       raise ValueError("file {} is not a file or dir.".format(path))
 
-pip install split-folders
 import splitfolders
 
 def splitFolders(inputFolder, outputFolder, trainingRatio, validationRatio, testRatio):
